@@ -71,3 +71,6 @@ int main()
 	std::cout << edit_distance(str1, str2) << std::endl;
 	return 0;
 }
+
+//Code written by Jasfiq Rahman as a part of the Data Structures and Algorithms Specialization offered by
+//the University of California, San Diego and the Higher School of Economics, Moscow on Coursera.

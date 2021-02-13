@@ -56,7 +56,7 @@ vector<int> optimal_sequence(int n)
 
 		arr.push_back(minFromThree(a, b, c));
 	}
-
+	
 	std::vector<int> sequence;
 	while (n >= 1)
 	{
@@ -116,3 +116,6 @@ int main()
 		std::cout << sequence[i] << " ";
 	}
 }
+
+//Code written by Jasfiq Rahman as a part of the Data Structures and Algorithms Specialization offered by
+//the University of California, San Diego and the Higher School of Economics, Moscow on Coursera.

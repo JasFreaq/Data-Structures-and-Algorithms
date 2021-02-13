@@ -72,3 +72,6 @@ int main()
 
 	std::cout << lcs2(a, b) << std::endl;
 }
+
+//Code written by Jasfiq Rahman as a part of the Data Structures and Algorithms Specialization offered by
+//the University of California, San Diego and the Higher School of Economics, Moscow on Coursera.
