@@ -4,6 +4,8 @@
 
 using namespace std;
 
+#define LLONG_MAX std::numeric_limits<long long>::max()
+
 int negative_cycle(vector<vector<int>>& graph, vector<vector<int>>& costs)
 {
 	vector<int> root(graph.size(), -1);
@@ -15,7 +17,7 @@ int negative_cycle(vector<vector<int>>& graph, vector<vector<int>>& costs)
 	graph.push_back(root);
 	costs.push_back(rootCost);
 
-	vector<long long> distances(graph.size(), -1);
+	vector<long long> distances(graph.size(), LLONG_MAX);
 	distances[graph.size() - 1] = 0;
 	bool relaxed;
 
@@ -27,7 +29,7 @@ int negative_cycle(vector<vector<int>>& graph, vector<vector<int>>& costs)
 			for (size_t j = 0; j < graph[i].size(); j++)
 			{
 				size_t v = graph[i][j];
-				if (distances[i] != -1 && (distances[v] > distances[i] + costs[i][j] || distances[v] == -1))
+				if (distances[i] != LLONG_MAX && distances[v] > distances[i] + costs[i][j])
 				{
 					distances[v] = distances[i] + costs[i][j];
 					relaxed = true;

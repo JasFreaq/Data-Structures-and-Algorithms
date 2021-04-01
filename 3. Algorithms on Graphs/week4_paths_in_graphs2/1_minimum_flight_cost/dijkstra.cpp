@@ -5,6 +5,8 @@
 
 using namespace std;
 
+#define LLONG_MAX std::numeric_limits<long long>::max()
+
 struct cost
 {
 	int index = -1;
